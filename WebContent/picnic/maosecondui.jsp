@@ -12,11 +12,10 @@
 <script
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK_1dtxdSOtLRWPJy6ntqCm9kxqrLmRPs&callback=initMap"
 	async defer></script>
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
 <link rel="stylesheet"
 	href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script>
 	$(function() {
@@ -33,7 +32,12 @@ var zoom =7;
  function change(value){
 
 	 switch(value) {
-	    case '新北市':
+	    case '臺北市':
+	    	Latitude =25.09108;
+	        Longitude =121.5598;
+	        zoom =12;
+	        break;
+		case '新北市':
 	    	Latitude =25.06971;
 	        Longitude =121.4629;
 	        zoom =12;
@@ -46,11 +50,6 @@ var zoom =7;
 	    case '臺中市':
 	    	Latitude =24.23321;
 	        Longitude =120.9417;
-	        zoom =12;
-	        break;
-	    case '臺北市':
-	    	Latitude =25.09108;
-	        Longitude =121.5598;
 	        zoom =12;
 	        break;
 	    case '桃園縣':
@@ -245,6 +244,7 @@ var zoom =7;
 								<tr>
 									<td>縣市: <select name="area" id="input"
 										class="form-control" required="required" onmouseup="change(this.value)">
+											<option value="臺北市">臺北市</option>
 											<option value="新北市">新北市</option>
 											<option value="高雄市">高雄市</option>
 											<option value="臺中市">臺中市</option>
@@ -375,8 +375,7 @@ var zoom =7;
 		session.removeAttribute("people");
 		session.removeAttribute("name");
 	%>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js "></script>
+	
 </body>
 </html>
 

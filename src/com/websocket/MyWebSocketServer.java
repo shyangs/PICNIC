@@ -47,13 +47,13 @@ public class MyWebSocketServer {
 
 
 		if (mapChatroomNo.containsKey(room)){
-			System.out.println("有近來麻1");
+//			System.out.println("有近來麻1");
 			Set<Session> session = mapChatroomNo.get(room);
 			session.add(userSession);
 			mapChatroomNo.put(room, session);
 
 		}else{
-			System.out.println("有近來麻2");
+//			System.out.println("有近來麻2");
 			connectedSessions.add(userSession);
 			mapChatroomNo.put(room, connectedSessions);
 		}
@@ -74,7 +74,7 @@ public class MyWebSocketServer {
 
 		// 確認Map
 		if( mapChatroomNo.containsKey(room)){
-			System.out.println("有近來麻3");
+//			System.out.println("有近來麻3");
 			Set<Session> set = mapChatroomNo.get(room);
 			String people= String.valueOf(set.size());
 
@@ -89,7 +89,7 @@ public class MyWebSocketServer {
 			for(Session session:set){
 
 				session.getAsyncRemote().sendText(message);
-				System.out.println("有近來麻4");
+//				System.out.println("有近來麻4");
 
 			}
 			System.out.println("Message received: " + message);

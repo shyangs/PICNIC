@@ -1,4 +1,4 @@
-<%@ page contentType="text/css; charset=UTF-8" pageEncoding="Big5" %>
+<%-- <%@ page contentType="text/css; charset=UTF-8" pageEncoding="Big5" %>
 <footer class="footer">
     <div class="container">
         <nav class="footer-nav">
@@ -31,4 +31,4 @@
             </div>
         </nav>
     </div>
-</footer>
+</footer> --%>
